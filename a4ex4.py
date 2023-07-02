@@ -1,26 +1,18 @@
-start = int(input("start: "))
-stop = int(input("stop: "))
-step = int(input ("step: "))
-
-print("\n")
-odd_counter = 0
-even_sum = 0
-
-for i in range(start,stop,step):
+def round_(number, ndigits: int = None):
+    if ndigits is None:
+        result = (int(number + 0.5))
+        return print("round_("+str(number)+") =", int(result))
+    else:
+        result = (int(pow(10,ndigits)*number + 0.5)) / pow(10,ndigits)
+        return print("round_("+str(number)+", "+str(ndigits)+") =", result)
     
-    x = len(range(start,stop,step))
-
-    if i % 2 == 1:
-        odd_counter += 1
-    elif i % 2 == 0:
-        even_sum = even_sum + i
-        
-    if i == start + step :
-        print("2nd value in range = ", i)
-    if i == start + (x-1) * step :
-        print("Last value in range = ", i)
-print("odd_counter = ", odd_counter)
-print("even_sum = ", even_sum)
-
-
-
+round_(777.777)
+round_(777.777, 0)
+round_(777.777, 1)
+round_(777.777, 2)
+round_(777.777, 3)
+round_(777.777, 4)
+round_(777.777, -1)
+round_(777.777, -2)
+round_(777.777, -3)
+round_(777.777, -4)
