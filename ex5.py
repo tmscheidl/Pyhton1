@@ -1,0 +1,13 @@
+x = int(input("Enter the width: "))
+y = float(input("Enter the squat: "))
+z = float(input("Enter the bench press: "))
+u = float(input("Enter the deadlift: "))
+print("##############################")
+print("#", "", "Powerlifting 2022W","", "", "", "", "", "", "", "#")
+print("##############################")
+print("Maximum Squat:       ", round(y,1) ,"kg")
+print("Maximum Bench Press: ", round(z,1) ,"kg")
+print("Maximum Deadlift:    ", round(u,1) , "kg")
+print("------------------------------")
+print("Total:              ", round(y+z+u,1) ,"kg")
+
